@@ -130,6 +130,9 @@ class Program
         school.ListCourses();
 
         Console.WriteLine();
+        school.ListDistanceCourses();
+
+        Console.WriteLine();
         school.ListStudents();
 
         Console.WriteLine();
