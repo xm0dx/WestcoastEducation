@@ -93,6 +93,18 @@ class Program
         school.AddCourse(webb);
         school.AddCourse(mobil);
 
+        // testar att en kurs med fel datum inte läggs in
+        var fel = new Course
+        {
+            CourseNumber = "FEL999",
+            Title = "Kurs med fel datum",
+            Duration = 2,
+            StartDate = new DateTime(2027, 3, 1),
+            EndDate = new DateTime(2027, 2, 1),
+            IsOnline = false
+        };
+        school.AddCourse(fel);
+
         // koppla rätt lärare till rätt kurs
         school.AssignTeacher("WEB101", anna);
         school.AssignTeacher("MOB201", johan);
