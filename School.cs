@@ -27,6 +27,11 @@ public class School
         {
             Console.WriteLine($"Kurs {course.CourseNumber} finns redan.");
         }
+        else if (course.EndDate < course.StartDate)
+        {
+            // en kurs kan inte sluta innan den börjat
+            Console.WriteLine($"Kurs {course.CourseNumber} har slutdatum före startdatum.");
+        }
         else
         {
             Courses.Add(course);
