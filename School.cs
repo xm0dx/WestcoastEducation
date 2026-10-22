@@ -134,12 +134,19 @@ public class School
     {
         Console.WriteLine("Distanskurser:");
 
+        bool found = false;
         foreach (var course in Courses)
         {
             if (course.IsOnline)
             {
                 Console.WriteLine($"  {course}");
+                found = true;
             }
+        }
+
+        if (!found)
+        {
+            Console.WriteLine("  inga distanskurser inlagda");
         }
     }
 
