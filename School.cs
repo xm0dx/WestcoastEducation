@@ -57,7 +57,24 @@ public class School
 
     public void AddTeacher(Teacher teacher)
     {
-        Teachers.Add(teacher);
+        // samma kontroll som för studerande, en lärare ska bara finnas en gång
+        bool exists = false;
+        foreach (var existing in Teachers)
+        {
+            if (existing.PersonalNumber == teacher.PersonalNumber)
+            {
+                exists = true;
+            }
+        }
+
+        if (exists)
+        {
+            Console.WriteLine($"{teacher.FirstName} {teacher.LastName} finns redan som lärare.");
+        }
+        else
+        {
+            Teachers.Add(teacher);
+        }
     }
 
     public void AddEducationLeader(EducationLeader leader)
