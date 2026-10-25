@@ -7,6 +7,6 @@ public class EducationLeader : Teacher
 
     public override string ToString()
     {
-        return $"{FirstName} {LastName}, {KnowledgeArea}, anställd {EmploymentDate.ToShortDateString()}";
+        return $"{FirstName} {LastName}, {KnowledgeArea}, anställd {EmploymentDate:yyyy-MM-dd}";
     }
 }

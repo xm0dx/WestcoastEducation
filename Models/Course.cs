@@ -36,6 +36,7 @@ public class Course
             teacherName = $"{Teacher.FirstName} {Teacher.LastName}";
         }
 
-        return $"{CourseNumber} {Title}, {Duration} {DurationUnit}, {form}, {StartDate.ToShortDateString()} till {EndDate.ToShortDateString()}, lärare: {teacherName}";
+        // yyyy-MM-dd så att datumet ser likadant ut på alla datorer
+        return $"{CourseNumber} {Title}, {Duration} {DurationUnit}, {form}, {StartDate:yyyy-MM-dd} till {EndDate:yyyy-MM-dd}, lärare: {teacherName}";
     }
 }
